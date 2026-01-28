@@ -26,8 +26,12 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
-        ?>
+    echo "PHP Self: " . $_SERVER["PHP_SELF"] . "<br>";
+    echo "Request Method: " . $_SERVER["REQUEST_METHOD"] . "<br>";
+    echo "Host: " . $_SERVER["HTTP_HOST"] . "<br>";
+    echo "User Agent: " . $_SERVER["HTTP_USER_AGENT"];
+    ?>
+
     </div>
 
     <!-- Exercise 2 -->
@@ -42,8 +46,13 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
-        ?>
+    if (isset($_GET["name"])) {
+        echo "Hello, " . $_GET["name"] . "!";
+    } else {
+        echo "Hello, Guest!";
+    }
+    ?>
+
     </div>
 
     <!-- Exercise 3 -->
@@ -59,8 +68,17 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
+        if (isset($_GET["product"]) && isset($_GET["quantity"])) {
+            echo "You ordered " . $_GET["quantity"] . " " . $_GET["product"] . "(s)";
+        } elseif (!isset($_GET["product"]) && !isset($_GET["quantity"])) {
+            echo "Product and quantity are missing.";
+        } elseif (!isset($_GET["product"])) {
+            echo "Product is missing.";
+        } else {
+            echo "Quantity is missing.";
+        }
         ?>
+
     </div>
 
 </body>

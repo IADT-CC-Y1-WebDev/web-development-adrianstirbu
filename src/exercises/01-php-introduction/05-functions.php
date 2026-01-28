@@ -24,8 +24,15 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
+        function celsiusToFahrenheit($celsius) {
+            return ($celsius * 9 / 5) + 32;
+        }
+
+        echo "0°C = " . celsiusToFahrenheit(0) . "°F<br>";
+        echo "20°C = " . celsiusToFahrenheit(20) . "°F<br>";
+        echo "30°C = " . celsiusToFahrenheit(30) . "°F";
         ?>
+
     </div>
 
     <!-- Exercise 2 -->
@@ -40,8 +47,17 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
+        function calculateRectangleArea($width, $height = null) {
+            if ($height === null) {
+                return $width * $width;
+            }
+            return $width * $height;
+        }
+
+        echo "Rectangle (5 x 10): " . calculateRectangleArea(5, 10) . "<br>";
+        echo "Square (4 x 4): " . calculateRectangleArea(4);
         ?>
+
     </div>
 
     <!-- Exercise 3 -->
@@ -56,8 +72,17 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
+        function checkEvenOdd($number) {
+            if ($number % 2 == 0) {
+                return "Even";
+            }
+            return "Odd";
+        }
+
+        echo "3478 is " . checkEvenOdd(7) . "<br>";
+        echo "109013 is " . checkEvenOdd(10);
         ?>
+
     </div>
 
     <!-- Exercise 4 -->
@@ -72,8 +97,23 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
+        function getArrayStats($numbers) {
+            $min = min($numbers);
+            $max = max($numbers);
+            $average = array_sum($numbers) / count($numbers);
+
+            return [$min, $max, $average];
+        }
+
+        $values = [10, 20, 30, 40, 50];
+
+        [$min, $max, $average] = getArrayStats($values);
+
+        echo "Minimum: $min<br>";
+        echo "Maximum: $max<br>";
+        echo "Average: $average";
         ?>
+
     </div>
 
 </body>

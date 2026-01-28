@@ -26,7 +26,17 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
+        $movies = [
+            "The Matrix",
+            "Inception",
+            "Interstellar",
+            "The Dark Knight",
+            "Gladiator"
+        ];
+
+        for ($i = 0; $i < count($movies); $i++) {
+            echo "Movie " . ($i + 1) . ": " . $movies[$i] . "<br>";
+        }
         ?>
     </div>
 
@@ -41,8 +51,19 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
-        ?>
+    $student = [
+    "name" => "Adrian Stirbu",
+    "studentId" => "N00257061",
+    "course" => "Web Development",
+    "grade" => "First Year"
+];
+
+echo "Student " . $student["name"] . 
+     " (ID: " . $student["studentId"] . 
+     ") is enrolled in " . $student["course"] . 
+     " and is currently in " . $student["grade"] . ".";
+?>
+
     </div>
 
     <!-- Exercise 3 -->
@@ -57,8 +78,19 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
-        ?>
+    $capitals = [
+    "Ireland" => "Dublin",
+    "France" => "Paris",
+    "Germany" => "Berlin",
+    "Spain" => "Madrid",
+    "Italy" => "Rome"
+];
+
+foreach ($capitals as $country => $capital) {
+    echo "The capital of $country is $capital.<br>";
+}
+?>
+
     </div>
 
     <!-- Exercise 4 -->
@@ -74,8 +106,28 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
-        ?>
+    $menu = [
+        "Starters" => [
+        "Soup" => 5,
+        "Garlic Bread" => 4,
+        "Salad" => 6
+    ],
+        "Main Course" => [
+        "Steak" => 18,
+        "Pasta" => 12,
+        "Burger" => 10
+    ]
+];
+
+    foreach ($menu as $category => $items) {
+    echo "<strong>$category</strong><br>";
+    foreach ($items as $item => $price) {
+        echo "$item: €$price<br>";
+    }
+    echo "<br>";
+}
+?>
+
     </div>
 
 </body>
