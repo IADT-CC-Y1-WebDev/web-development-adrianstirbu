@@ -23,11 +23,19 @@
         is [first] [last], I am [age] years old and I live in [city]."
     </p>
 
+
+
+
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
-        ?>
+        $firstName = "Adrian";
+        $lastName = "Stirbu";
+        $age = 21;
+        $city = "Dublin";
+
+    echo "My name is $firstName $lastName, I am $age years old and I live in $city.";
+?>
     </div>
 
     <!-- Exercise 2 -->
@@ -43,7 +51,30 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
+$price1 = 10;
+$price2 = 5;
+$price3 = 8;
+
+$quantity1 = 2;
+$quantity2 = 3;
+$quantity3 = 1;
+
+$subtotal1 = $price1 * $quantity1;
+$subtotal2 = $price2 * $quantity2;
+$subtotal3 = $price3 * $quantity3;
+
+$total = $subtotal1 + $subtotal2 + $subtotal3;
+
+$discount = $total * 0.10;
+$finalTotal = $total - $discount;
+
+echo "Subtotal for product 1: €$subtotal1<br>";
+echo "Subtotal for product 2: €$subtotal2<br>";
+echo "Subtotal for product 3: €$subtotal3<br>";
+echo "Total cost: €$total<br>";
+echo "Final price after 10% discount: €$finalTotal";
+?>
+
         ?>
     </div>
 
@@ -58,8 +89,15 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
-        ?>
+        $isStudent = true;
+        $hasDiscount = false;
+        $isPremiumMember = true;
+
+        echo "Student: " . ($isStudent ? "Yes" : "No") . "<br>";
+        echo "Has Discount: " . ($hasDiscount ? "Yes" : "No") . "<br>";
+        echo "Premium Member: " . ($isPremiumMember ? "Yes" : "No");
+?>
+
     </div>
 
 </body>
