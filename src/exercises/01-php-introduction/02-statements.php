@@ -26,7 +26,17 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
+        $age = 41;
+
+        if ($age >= 0 && $age <= 12) {
+            echo "Child";
+        } elseif ($age >= 13 && $age <= 19) {
+            echo "Teenager";
+        } elseif ($age >= 20 && $age <= 64) {
+            echo "Adult";
+        } else {
+            echo "Senior";
+        }
         ?>
     </div>
 
@@ -42,8 +52,34 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
-        ?>
+    $day = 3;
+
+    switch ($day) {
+        case 1:
+            echo "Monday - Weekday";
+            break;
+        case 2:
+            echo "Tuesday - Weekday";
+            break;
+        case 3:
+            echo "Wednesday - Weekday";
+            break;
+        case 4:
+            echo "Thursday - Weekday";
+            break;
+        case 5:
+            echo "Friday - Weekday";
+            break;
+        case 6:
+            echo "Saturday - Weekend";
+            break;
+        case 7:
+            echo "Sunday - Weekend";
+            break;
+        default:
+            echo "Invalid day";
+    }
+    ?>
     </div>
 
     <!-- Exercise 3 -->
@@ -57,8 +93,12 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
-        ?>
+    $number = 5;
+
+    for ($i = 1; $i <= 10; $i++) {
+        echo "$number × $i = " . ($number * $i) . "<br>";
+    }
+    ?>
     </div>
 
     <!-- Exercise 4 -->
@@ -72,7 +112,16 @@
     <p class="output-label">Output:</p>
     <div class="output">
         <?php
-        // TODO: Write your solution here
+        $count = 10;
+
+        while ($count >= 0) {
+            if ($count == 0) {
+                echo "Blast off!";
+            } else {
+                echo $count . "<br>";
+            }
+            $count--;
+        }
         ?>
     </div>
 
